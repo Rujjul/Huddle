@@ -1,0 +1,38 @@
+{
+  "name": "@huddle/backend",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "start": "node dist/server.js",
+    "db:migrate": "tsx src/migrate.ts",
+    "test": "tsx --test src/app.test.ts src/auth.test.ts",
+    "test:integration": "tsx --test src/auth.integration.test.ts"
+  },
+  "dependencies": {
+    "connect-pg-simple": "^10.0.0",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.7.0",
+    "express-session": "^1.19.0",
+    "file-type": "^22.1.1",
+    "google-auth-library": "^11.1.0",
+    "multer": "^2.4.0",
+    "pg": "^8.16.0",
+    "socket.io": "^4.8.4"
+  },
+  "devDependencies": {
+    "@types/connect-pg-simple": "^7.0.3",
+    "@types/express": "^5.0.0",
+    "@types/express-session": "^1.19.0",
+    "@types/multer": "^2.2.0",
+    "@types/node": "^24.0.0",
+    "@types/pg": "^8.15.0",
+    "@types/supertest": "^6.0.0",
+    "supertest": "^7.1.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  }
+}
